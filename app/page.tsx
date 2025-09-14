@@ -13,17 +13,17 @@ export default function Home() {
     setNames([...names, 'New Name!'])
   }
   const cards = isVisible
-    && names.map((name, index) => <Card key={index}>{name}</Card>)
+    && names.map((name, index) => <Card key={index} className="">{name}</Card>)
   return (
     <>
-    <div className="">
+    <div className="flex flex-col">
         <div>Hello {name}</div>
         {cards}
         <div>
           <button onClick={handleClick}>
             {isVisible ? 'Hide' : 'Show'}
           </button>
-          <button></button>
+          <button onClick={handleAdd}>Add Name</button>
         </div>
     </div>
     </>

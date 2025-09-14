@@ -24,3 +24,7 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.link{
+    @apply p-1 rounded-md text-gray-200 hover:bg-gray-200 hover:text-gray-900 transition;
+}

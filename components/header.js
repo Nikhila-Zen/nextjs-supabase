@@ -1,13 +1,21 @@
+'use client';
+
 import Counter from "@/components/counter";
+import Navigation from "@/components/navigation";
 import Link from "next/link";
+
 export default function Header() {
     return (
-        <header>
-            I am header!
-            <Link href="/">Home</Link>
-            <Link href="/about">About</Link>
-            <Link href="/about/projects">Projects</Link>
-            {/* <Counter /> */}
+        <header className="flex justify-between md:items-center">
+            <div className="flex items-center md:space-x-12">
+            <div className="hidden md:block">
+            <Link href="/" className="text-xl">Nikhila G</Link>
+            </div>
+            <Navigation />
+            </div>
+            <div>
+                Dark Toggle
+            </div>
         </header>
     );
 }
