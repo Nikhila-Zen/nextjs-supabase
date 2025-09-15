@@ -2,7 +2,11 @@
 
 import { useState } from "react";
 import Card from "@/components/Card";
-export default function Home() {
+interface HomeProps {
+  searchParams: Record<string, string>;
+}
+
+export default function Home({searchParams}: HomeProps) {
   const [isVisible, setIsVisible] = useState(true);
   const [names, setNames] = useState(['Alice', 'Bob', 'Charlie'])
   const name = 'Nikhi'
@@ -14,6 +18,8 @@ export default function Home() {
   }
   const cards = isVisible
     && names.map((name, index) => <Card key={index} className="">{name}</Card>)
+  console.log(searchParams)
+  // if (searchParams.error) throw new Error('errrr!')
   return (
     <>
     <div className="flex flex-col">
