@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Card from "@/components/Card";
 interface HomeProps {
-  searchParams: Record<string, string>;
+  searchParams: { [key: string]: string | string[] | undefined };
 }
 
 export default function Home({searchParams}: HomeProps) {
@@ -19,7 +19,6 @@ export default function Home({searchParams}: HomeProps) {
   const cards = isVisible
     && names.map((name, index) => <Card key={index} className="">{name}</Card>)
   console.log(searchParams)
-  // if (searchParams.error) throw new Error('errrr!')
   return (
     <>
     <div className="flex flex-col">
