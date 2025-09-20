@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     template: '%s | Nikhila G',
     default: 'Nikhila G'
   },
-  description: "Nikhila's Portfolio",
+  // description: "Nikhila's Portfolio",
 };
 
 export default function RootLayout({children}: Readonly<{children: React.ReactNode;}>) {
