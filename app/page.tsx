@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Card from "@/components/Card";
 interface HomeProps {
-  searchParams: { [key: string]: string | string[] | undefined };
+  searchParams: Record<string, any>;
 }
 
 export default function Home({searchParams}: HomeProps) {
